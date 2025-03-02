@@ -1,10 +1,10 @@
-#📌 Aplicación de Nutrición
+# 📌Aplicación de Nutrición
 
-#🚀 Descripción
+## Descripción
 
-Esta es una aplicación web de nutrición desarrollada con React y Vite. Su objetivo es proporcionar información sobre alimentación saludable, recetas y consejos nutricionales.
+**Improve Yourself** es una aplicación web de nutrición desarrollada con React y Vite. Su objetivo es proporcionar información sobre alimentación saludable, mantener una rutina diaria, encontrar recetas y consejos nutricionales.
 
-#🛠 Tecnologías Utilizadas
+## 🛠 Tecnologías Utilizadas
 
 ⚛️ React: Biblioteca para la construcción de interfaces de usuario.
 
@@ -15,7 +15,7 @@ Esta es una aplicación web de nutrición desarrollada con React y Vite. Su obje
 🏗 TypeScript: Para un desarrollo más seguro y estructurado.
 
 
-▶️ Instalación y Ejecución
+## ▶️ Instalación y Ejecución
 
 Para ejecutar el proyecto localmente, sigue estos pasos:
 
@@ -38,11 +38,11 @@ npm install
 npm run dev
 ```
 
-#📌 Funcionalidades
+# 📌 Funcionalidades
 
 ✅ Información nutricional 📊✅ Recetas saludables 🥗✅ Consejos personalizados 🏋️✅ Interfaz amigable y responsive 📱
 
-#👨‍💻 Autor
+# 👨‍💻 Autor
 
 Desarrollado por Juan Felipe Joaqui Lopera ✨
 
