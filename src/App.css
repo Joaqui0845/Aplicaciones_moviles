@@ -1,4 +1,4 @@
-/* Fondo negro en toda la aplicación */
+/*Fondo de la aplicacion */
 body {
   background-color: black;
   color: white;
@@ -69,4 +69,219 @@ body {
 
 .login-container a:hover {
   text-decoration: underline;
+}
+
+/*Estilo de registro*/
+
+/* Estilos de los inputs */
+.Register-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+}
+
+/* Botón de inicio de sesión */
+.Register-container button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Register-container button:hover {
+  background-color: #45a049;
+}
+
+/* Link de registro */
+.Register-container p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.Register-container a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.Register-container a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Barra de navegacion */
+.navbar {
+  background-color: #f5f4f4;
+  color: white;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 100px;
+}
+
+/*home estilos*/
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 60px; /* Aumentar separación */
+  width: 100%; /* Hacer que el contenido sea más ancho */
+  max-width: 1400px; /* Limitar el ancho máximo */
+}
+
+.progress-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+
+.nutrients {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.food-section,
+.activity-section {
+  width: 350px; /* Aumenta el ancho */
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+
+button {
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  color: white;
+}
+
+.menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-icon {
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Menú lateral */
+.side-menu {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background: rgb(82, 81, 81);
+  transition: left 0.3s;
+  padding: 20px;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  margin: 20px 0;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Calendario */
+.calendar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.calendar span {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(10, 10, 10);
+  border-radius: 50%;
+}
+
+/* Sección de progreso */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.macro-bars .bar {
+  width: 100px;
+  height: 10px;
+  background: gray;
+  border-radius: 5px;
 }
