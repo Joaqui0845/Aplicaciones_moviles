@@ -7,8 +7,10 @@ const Navbar = () => {
       <Link to="/">🏠</Link>
       <Link to="/search">🔍</Link>
       <Link to="/profile">👤</Link>
+      <Link to="/progress">📈</Link>
     </nav>
   );
 };
 
 export default Navbar;
+  
