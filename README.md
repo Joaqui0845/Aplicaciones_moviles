@@ -1,55 +1,101 @@
-# 📌Aplicación de Nutrición
+# 📱 Improve Yourself - Aplicación de Nutrición
 
-## Descripción
+## 📖 Descripción
 
-**Improve Yourself** es una aplicación web de nutrición desarrollada con React y Vite. Su objetivo es proporcionar información sobre alimentación saludable, mantener una rutina diaria, encontrar recetas y consejos nutricionales.
+**Improve Yourself** es una aplicación web de nutrición desarrollada con React y Vite, diseñada para ayudarte a mantener un estilo de vida saludable. La aplicación te permite:
+
+- 📊 Realizar un seguimiento de tus calorías diarias
+- 🍳 Descubrir y guardar recetas saludables
+- 📈 Monitorear tu progreso
+- 🔍 Buscar información nutricional de alimentos
 
 ## 🛠 Tecnologías Utilizadas
 
-⚛️ React: Biblioteca para la construcción de interfaces de usuario.
+- ⚛️ **React 18**: Biblioteca para la construcción de interfaces de usuario
+- ⚡ **Vite**: Herramienta de desarrollo rápida y optimizada
+- 🎨 **CSS**: Estilizado moderno y responsive
+- 📱 **React Router**: Navegación entre páginas
+- 🏗 **TypeScript**: Desarrollo seguro y estructurado
+- 💾 **Local Storage**: Almacenamiento de datos del usuario
 
-⚡ Vite: Herramienta de desarrollo rápida y optimizada para React.
+## 📱 Características Principales
 
-🎨 CSS: Estilizado de la aplicación.
+### 1. Página Principal (Home)
+- Vista general de calorías diarias
+- Resumen de macronutrientes
+- Progreso de objetivos diarios
 
-🏗 TypeScript: Para un desarrollo más seguro y estructurado.
+### 2. Búsqueda (Search)
+- Buscador de alimentos
+- Historial de búsquedas
+- Alimentos favoritos
 
+### 3. Recetas
+- Colección de recetas saludables
+- Filtros por categoría
+- Detalles nutricionales
+
+### 4. Progreso
+- Gráficos de progreso
+- Estadísticas personales
+- Registro de hábitos
 
 ## ▶️ Instalación y Ejecución
 
-Para ejecutar el proyecto localmente, sigue estos pasos:
-
-1.Clona el repositorio:
+1. **Clona el repositorio:**
 ```bash
 git clone https://github.com/Joaqui0845/Aplicaciones_moviles.git
 ```
-2.Ingresa al directorio del proyecto:
+
+2. **Ingresa al directorio:**
 ```bash
 cd app-nutricion
 ```
 
-3.Instalar las dependencias 
+3. **Instala las dependencias:**
 ```bash
 npm install
 ```
 
-4.Iniciar el entorno de desarrollo
+4. **Inicia el entorno de desarrollo:**
 ```bash
 npm run dev
 ```
 
-# 📌 Funcionalidades
+## 📁 Estructura del Proyecto
 
-✅ Información nutricional 📊✅ Recetas saludables 🥗✅ Consejos personalizados 🏋️✅ Interfaz amigable y responsive 📱
+```
+app-nutricion/
+├── src/
+│   ├── components/     # Componentes reutilizables
+│   ├── pages/         # Páginas principales
+│   ├── assets/        # Recursos estáticos
+│   ├── styles/        # Archivos CSS
+│   └── App.tsx        # Componente principal
+├── public/            # Archivos públicos
+└── package.json       # Dependencias y scripts
+```
 
-# Figma
+## 🎨 Diseño UI/UX
 
-Presentacion de los mockups del proyecto 
+El diseño completo de la aplicación está disponible en Figma. Puedes ver los mockups y el flujo de navegación aquí:
 
-https://www.figma.com/proto/8kbf0pXVXMgAN4uhQO9Iyv/Improve-Yourself?node-id=45-2&starting-point-node-id=45%3A2&t=2VD8JLIkYP2qVeyW-1
+🔗 [Ver Diseño en Figma](https://www.figma.com/proto/8kbf0pXVXMgAN4uhQO9Iyv/Improve-Yourself?node-id=45-2&starting-point-node-id=45%3A2&t=2VD8JLIkYP2qVeyW-1)
 
-# 👨‍💻 Autor
+## 🤝 Contribuir
 
-Desarrollado por Juan Felipe Joaqui Lopera ✨
+Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
 
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
+## 👨‍💻 Autor
+
+Desarrollado con ❤️ por Juan Felipe Joaqui Lopera
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
