@@ -1,18 +1,16 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 import Navbar from "../components/Navbar";
 import CaloriesProgress from "../components/CaloriesProgress";
 import MacroProgress from "../components/MacroProgress";
+import ProfileMenu from '../components/ProfileMenu';
 import "../App.css";
 
 interface FoodItem {
   name: string;
   calories: number;
-}
-
-interface FoodState {
-  desayuno: FoodItem[];
-  almuerzo: FoodItem[];
-  cena: FoodItem[];
+  protein: number;
+  carbs: number;
+  fats: number;
 }
 
 interface PersonalInfo {
@@ -30,6 +28,12 @@ interface Activity {
   name: string;
   duration: number;
   caloriesBurned: number;
+}
+
+interface FoodState {
+  desayuno: FoodItem[];
+  almuerzo: FoodItem[];
+  cena: FoodItem[];
 }
 
 const Home = () => {
@@ -60,7 +64,6 @@ const Home = () => {
   const [activityDuration, setActivityDuration] = useState('');
 
   const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
-  
 
   const handleInputChange = (field: keyof PersonalInfo, value: string) => {
     setPersonalInfo(prev => ({
@@ -92,7 +95,7 @@ const Home = () => {
     if (newFood && !isNaN(newCalories)) {
       setFood(prev => ({
         ...prev,
-        [meal]: [...prev[meal], { name: newFood, calories: newCalories }]
+        [meal]: [...prev[meal], { name: newFood, calories: newCalories, protein: 0, carbs: 0, fats: 0 }]
       }));
       setCalories(prev => prev + newCalories);
     }
@@ -142,16 +145,24 @@ const Home = () => {
       {/* Barra de navegación */}
       <header className="navbar">
         <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>☰</button>
-        <div className="header-content">
+        <div style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center',
+          flex: 1
+        }}>
           <h2>Improve Yourself</h2>
-          <img src="/logo.png" alt="Logo" className="logo" />
+          <img src="/logo.png" alt="Logo" className="logo" style={{ marginLeft: '10px' }} />
         </div>
-        <img src="/Profile.png" alt="Perfil" className="profile-icon" />
+        <ProfileMenu />
       </header>
 
       {/* Menú lateral */}
-      <nav className={`side-menu ${menuOpen ? "open" : ""}`}>
-        <button className="close-menu" onClick={() => setMenuOpen(false)}>×</button>
+      <div className={`side-menu ${menuOpen ? 'open' : ''}`}>
+        <div className="menu-header">
+          <h3>Menú</h3>
+          <button className="close-btn" onClick={() => setMenuOpen(false)}>×</button>
+        </div>
         <h3 style={{ marginBottom: '15px', padding: '10px' }}>Calculadora IMC</h3>
         <div className="imc-calculator" style={{ padding: '15px' }}>
           <input
@@ -194,7 +205,7 @@ const Home = () => {
             <p>Tu IMC: {calculateIMC()}</p>
           </div>
         </div>
-      </nav>
+      </div>
 
       <main className="main-content">
         {/* Días de la semana */}

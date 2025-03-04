@@ -128,12 +128,6 @@ body {
   min-height: 60px;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin-right: 100px;
-}
-
 .menu-btn {
   background: none;
   border: none;
@@ -143,10 +137,9 @@ body {
   padding: 0;
 }
 
-.profile-icon {
-  width: 40px;
+.logo {
   height: 40px;
-  border-radius: 50%;
+  width: auto;
 }
 
 /*home estilos*/
@@ -431,20 +424,6 @@ h3, h4 {
   margin: 0;
   font-size: 1.5rem;
   color: white;
-}
-
-.logo {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 10px;
-  transition: transform 0.2s ease;
-}
-
-.logo:hover {
-  transform: scale(1.1);
 }
 
 .close-menu {

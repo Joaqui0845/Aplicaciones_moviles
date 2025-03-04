@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Search from './pages/Search';
 import Recetas from './pages/Recetas';
 import Progress from './pages/Progress';
+import EditProfile from './pages/EditProfile';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/search" element={<Search />} />
       <Route path="/recetas" element={<Recetas />} />
       <Route path="/progress" element={<Progress />} />
+      <Route path="/edit-profile" element={<EditProfile />} />
     </Routes>
   );
 }
