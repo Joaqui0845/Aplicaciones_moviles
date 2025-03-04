@@ -82,16 +82,6 @@ El diseño completo de la aplicación está disponible en Figma. Puedes ver los 
 
 🔗 [Ver Diseño en Figma](https://www.figma.com/proto/8kbf0pXVXMgAN4uhQO9Iyv/Improve-Yourself?node-id=45-2&starting-point-node-id=45%3A2&t=2VD8JLIkYP2qVeyW-1)
 
-## 🤝 Contribuir
-
-Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
 ## 👨‍💻 Autor
 
 Desarrollado con ❤️ por Juan Felipe Joaqui Lopera
