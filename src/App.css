@@ -154,56 +154,70 @@ body {
 .home-container {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   min-height: 100vh;
   background-color: rgba(2, 2, 2, 0.815);
   color: white;
-  padding-bottom: 70px; /* Space for navbar */
+  padding: 20px;
+  padding-bottom: 70px;
 }
 
 .content-container {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 60px; /* Aumentar separación */
-  width: 120%; /* Hacer que el contenido sea más ancho */
-  max-width: 1400px; /* Limitar el ancho máximo */
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 15px;
 }
 
 .progress-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 30px;
 }
 
 .nutrients {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .info-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
+  max-width: 350px;
 }
 
 .food-section,
 .activity-section {
-  width: 350px; /* Aumenta el ancho */
+  width: 100%;
   padding: 15px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.15);
 }
 
-button {
-  background-color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
+/* Media query para pantallas más grandes */
+@media (min-width: 768px) {
+  .content-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .progress-section {
+    margin-bottom: 0;
+  }
 }
 
 /* Menú lateral */
@@ -425,7 +439,7 @@ h3, h4 {
   object-fit: contain;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 5px;
+  padding: 10px;
   transition: transform 0.2s ease;
 }
 

@@ -4,9 +4,9 @@ import "../App.css";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <Link to="/">🏠</Link>
+      <Link to="/Home">🏠</Link>
       <Link to="/search">🔍</Link>
-      <Link to="/profile">👤</Link>
+      <Link to="/recetas">👨‍🍳</Link>
       <Link to="/progress">📈</Link>
     </nav>
   );
