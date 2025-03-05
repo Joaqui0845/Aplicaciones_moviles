@@ -144,12 +144,33 @@ body {
 
 /*home estilos*/
 
+.home-container, .page-container {
+  padding-top: 70px; /* Aumentado para dar más espacio después de la navbar */
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh;
   background-color: rgba(2, 2, 2, 0.815);
   color: white;
   padding: 20px;
@@ -542,6 +563,82 @@ h4 {
   }
 }
 
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 400px) {
+  /* Ajustes del contenedor de login */
+  .login-container {
+    width: 90%;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  /* Ajustes del contenedor de registro */
+  .Register-container {
+    width: 90%;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  /* Ajustes de la barra de navegación */
+  .navbar {
+    padding: 0.5rem;
+    min-height: 50px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  /* Ajustes del contenedor principal */
+  .home-container, .page-container {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    min-height: calc(100vh - 50px);
+  }
+
+  .content-container {
+    padding: 10px;
+  }
+
+  /* Ajustes de la sección de progreso */
+  .progress-container {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+  }
+
+  /* Ajustes de inputs y botones */
+  .login-container input,
+  .Register-container input,
+  .login-container button,
+  .Register-container button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Ajustes de texto */
+  h1 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}
+
+/* Ajustes generales para mejorar la experiencia móvil */
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+/* Prevenir zoom no deseado en inputs en iOS */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-size: 16px;
+}
+
 /* Progress Page Styles */
 .page-container {
   background-color: #1a1a1a;
@@ -777,4 +874,142 @@ h4 {
 
 .bottom-nav a.active {
   color: #4CAF50;
+}
+
+/* Ajustes para la página principal y de progreso */
+.home-container, .page-container {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 60px; /* Espacio para la navbar */
+  box-sizing: border-box;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 400px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    min-height: 50px;
+  }
+
+  .home-container, .page-container {
+    padding-top: 60px; /* Ajustado para móvil */
+  }
+
+  .content-container {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  /* Ajustes para elementos dentro de la página de progreso */
+  .objective-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .objective-option {
+    padding: 8px;
+    margin: 5px 0;
+  }
+}
+
+/* Ajustes para la navbar y contenedores principales */
+/*.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #141414;
+}
+
+/* Contenedores principales */
+.home-container, .page-container {
+  padding-top: 70px; /* Aumentado para dar más espacio después de la navbar */
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Ajustes específicos para la página de progreso */
+.objective-section {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 400px) {
+  .navbar {
+    min-height: 50px;
+  }
+
+  .home-container, .page-container {
+    padding-top: 60px; /* Ajustado para móvil */
+  }
+
+  .content-container {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .objective-section {
+    padding: 15px;
+    margin-top: 5px;
+  }
+
+  /* Ajustes para elementos dentro de la página de progreso */
+  .objective-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .objective-option {
+    padding: 8px;
+    margin: 5px 0;
+  }
+}
+
+/* Ajustes generales de scroll para móvil */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
 }

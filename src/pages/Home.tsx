@@ -152,7 +152,7 @@ const Home = () => {
           flex: 1
         }}>
           <h2>Improve Yourself</h2>
-          <img src="/logo.png" alt="Logo" className="logo" style={{ marginLeft: '10px' }} />
+          <img src="/logo.png" alt="Logo" className="logo" style={{ marginLeft: '13px' }} />
         </div>
         <ProfileMenu />
       </header>
@@ -250,6 +250,7 @@ const Home = () => {
           <div style={{ 
             display: 'flex',
             justifyContent: 'center',
+            flexWrap: 'wrap',
             alignItems: 'flex-start',
             gap: '60px'
           }}>
