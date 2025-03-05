@@ -76,16 +76,14 @@ const Recetas = () => {
   const RecipeCard = ({ recipe }: { recipe: Recipe }) => (
     <div 
       onClick={() => setSelectedRecipe(recipe)}
+      className="recipe-card"
       style={{
         backgroundColor: '#2a2a2a',
         borderRadius: '15px',
         padding: '15px',
         margin: '10px',
         cursor: 'pointer',
-        transition: 'transform 0.2s',
-        ':hover': {
-          transform: 'scale(1.02)'
-        }
+        transition: 'transform 0.2s'
       }}
     >
       <img 

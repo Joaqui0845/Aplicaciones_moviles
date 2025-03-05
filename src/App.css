@@ -382,6 +382,9 @@ h3, h4 {
 
 .meal-group {
   margin-bottom: 15px;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 15px;
 }
 
 .meal-input,
@@ -512,6 +515,10 @@ h4 {
   color: #888;
 }
 
+.recipe-card:hover {
+  transform: scale(1.02);
+}
+
 /* For mobile devices */
 @media (max-width: 768px) {
   .home-container {
@@ -533,4 +540,241 @@ h4 {
   .activity-section {
     padding: 10px;
   }
+}
+
+/* Progress Page Styles */
+.page-container {
+  background-color: #1a1a1a;
+  color: white;
+  min-height: 100vh;
+  padding: 15px;
+  padding-bottom: 80px;
+}
+
+.content-container {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.content-container h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.progress-section {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.progress-section h3 {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #404040;
+}
+
+/* Photo Section */
+.photo-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 5px;
+}
+
+.add-photo-button {
+  width: 80px;
+  height: 80px;
+  border: 2px dashed #4CAF50;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #4CAF50;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.add-photo-button:hover {
+  background-color: rgba(74, 175, 80, 0.1);
+}
+
+.photo-item {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.photo-date {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Goal Section */
+.goal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goal-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.goal-button:hover {
+  background-color: #404040;
+  transform: translateX(5px);
+}
+
+.goal-button.active {
+  background-color: #4CAF50;
+}
+
+.goal-button span:first-child {
+  font-size: 18px;
+  min-width: 24px;
+}
+
+/* Calories Section */
+.calories-chart {
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 10px 5px 25px 5px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.calories-bar {
+  flex: 1;
+  background-color: #4CAF50;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: height 0.3s;
+}
+
+.calories-bar:hover {
+  background-color: #5dbb61;
+}
+
+.day-label {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: #fff;
+  font-weight: 500;
+  background-color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Form Section */
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+}
+
+.form-input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: #666;
+}
+
+/* Navigation Styles */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.bottom-nav a:hover {
+  background-color: #333;
+}
+
+.bottom-nav a.active {
+  color: #4CAF50;
 }
