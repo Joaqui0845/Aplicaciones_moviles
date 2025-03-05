@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "../App.css";
 
@@ -92,27 +92,60 @@ const Progress = () => {
   );
 
   const CaloriesChart = () => {
-    const weekDays = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
-    
+    const [selectedMonth, setSelectedMonth] = useState<string>(new Date().toLocaleString('default', { month: 'long' }));
+    const [monthlyCalories, setMonthlyCalories] = useState<{ [key: string]: string }>({});
+  
+    // Cargar datos guardados en localStorage al iniciar
+    useEffect(() => {
+      const savedCalories = localStorage.getItem('monthlyCalories');
+      if (savedCalories) {
+        setMonthlyCalories(JSON.parse(savedCalories));
+      }
+    }, []);
+  
+    // Guardar en localStorage cuando cambian las calorías
+    useEffect(() => {
+      localStorage.setItem('monthlyCalories', JSON.stringify(monthlyCalories));
+    }, [monthlyCalories]);
+  
+    const handleMonthChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+      setSelectedMonth(e.target.value);
+    };
+  
+    const handleCalorieChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setMonthlyCalories({
+        ...monthlyCalories,
+        [selectedMonth]: e.target.value,
+      });
+    };
+  
     return (
       <div className="progress-section">
-        <h3>Calorías</h3>
-        <div className="calories-chart">
-          {userData.calories.map((cal, index) => (
-            <div
-              key={index}
-              className="calories-bar"
-              style={{
-                height: `${(cal / 3000) * 100}%`
-              }}
-            >
-              <span className="day-label">{weekDays[index]}</span>
-            </div>
+        <h3>Establece tu objetivo de calorías mensual</h3>
+        
+        <label>Selecciona un mes:</label>
+        <select value={selectedMonth} onChange={handleMonthChange} className="month-select">
+          {[
+            'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 
+            'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+          ].map((month) => (
+            <option key={month} value={month}>{month}</option>
           ))}
-        </div>
+        </select>
+  
+        <label>Calorías objetivo para {selectedMonth}:</label>
+        <input 
+          type="number" 
+          value={monthlyCalories[selectedMonth] || ''} 
+          onChange={handleCalorieChange} 
+          className="calorie-input"
+          placeholder="Ingrese calorías"
+        />
       </div>
     );
   };
+  
+  
 
   const WeightAndFatForm = () => (
     <div className="progress-section">

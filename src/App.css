@@ -562,6 +562,134 @@ h4 {
     padding: 10px;
   }
 }
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #121212;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.content-container {
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.progress-section {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.calorie-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background: #333;
+  color: white;
+  text-align: center;
+}
+
+.goal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.goal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background: #333;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.goal-button.active {
+  background: #007bff;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.photo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.photo-date {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.add-photo-button {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: #1e1e1e;
+  padding: 10px 0;
+}
+
+.bottom-nav a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.bottom-nav .active {
+  color: #007bff;
+}
+
 
 /* Media queries para dispositivos móviles */
 @media screen and (max-width: 400px) {
@@ -825,6 +953,7 @@ input[type="password"] {
   color: #ccc;
   font-size: 14px;
 }
+
 
 .form-input {
   width: 100%;

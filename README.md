@@ -80,7 +80,7 @@ app-nutricion/
 
 El diseño completo de la aplicación está disponible en Figma. Puedes ver los mockups y el flujo de navegación aquí:
 
-🔗 [Ver Diseño en Figma](https://www.figma.com/proto/8kbf0pXVXMgAN4uhQO9Iyv/Improve-Yourself?node-id=45-2&starting-point-node-id=45%3A2&t=2VD8JLIkYP2qVeyW-1)
+🔗 [Ver Diseño en Figma](https://www.figma.com/proto/8kbf0pXVXMgAN4uhQO9Iyv/Improve-Yourself?node-id=191-209&p=f&t=M68mQCyNulShtJ2K-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=191%3A209)
 
 ## 👨‍💻 Autor
 
