@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import cafe from './pagesrecurse/cafe.jpg';
 import arroz from './pagesrecurse/arroz.jpg';
@@ -9,24 +9,30 @@ import huevos from './pagesrecurse/huevos.jpg';
 import carneres from './pagesrecurse/carneres.jpg';
 import pollo from './pagesrecurse/pollo.jpg';
 import pescado from './pagesrecurse/pescado.jpg';
+import { CSSProperties } from 'react';
 
+// Definir la interfaz para los elementos de la canasta
+interface BasketItem {
+  id: number;
+  name: string;
+  image: string;
+}
 
 const Search = () => {
-  const [basicBasket, setBasicBasket] = useState([]);
+  const [basicBasket, setBasicBasket] = useState<BasketItem[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    const basketData = [
+    const basketData: BasketItem[] = [
       { id: 1, name: 'Arroz', image: arroz},
       { id: 2, name: 'Frijoles', image: frijoles },
       { id: 7, name: 'Pasta', image: pasta },
       { id: 8, name: 'Pan', image: pan },
       { id: 10, name: 'Huevos', image: huevos },
       { id: 11, name: 'Carne de Res', image: carneres },
-      { id: 12, name: 'Pollo', image:  pollo},
+      { id: 12, name: 'Pollo', image: pollo},
       { id: 13, name: 'Pescado', image: pescado },
       { id: 25, name: 'Café', image: cafe },
-
     ];
     setBasicBasket(basketData);
   }, []);
@@ -37,24 +43,24 @@ const Search = () => {
   );
 
   // Estilos inline
-  const containerStyle = {
+  const containerStyle: CSSProperties = {
     backgroundColor: '#1a1a1a',
     color: 'white',
     minHeight: '100vh',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column' as 'column'
   };
 
-  const headerStyle = {
+  const headerStyle: CSSProperties = {
     padding: '10px 15px',
     borderBottom: '1px solid #333',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap' as 'wrap'
   };
 
-  const searchBarStyle = {
+  const searchBarStyle: CSSProperties = {
     flex: 1,
     display: 'flex',
     alignItems: 'center',
@@ -65,7 +71,7 @@ const Search = () => {
     marginBottom: '10px'
   };
 
-  const inputStyle = {
+  const inputStyle: CSSProperties = {
     background: 'none',
     border: 'none',
     color: 'white',
@@ -73,13 +79,13 @@ const Search = () => {
     outline: 'none'
   };
 
-  const headerButtonsStyle = {
+  const headerButtonsStyle: CSSProperties = {
     display: 'flex',
     justifyContent: 'space-around',
     width: '100%'
   };
 
-  const buttonStyle = {
+  const buttonStyle: CSSProperties = {
     background: 'none',
     border: 'none',
     color: 'white',
@@ -87,27 +93,27 @@ const Search = () => {
     padding: '5px'
   };
 
-  const contentStyle = {
+  const contentStyle: CSSProperties = {
     flex: 1,
     padding: '15px'
   };
 
-  const h3Style = {
+  const h3Style: CSSProperties = {
     fontSize: '18px',
     marginBottom: '15px'
   };
 
-  const scrollContainerStyle = {
+  const scrollContainerStyle: CSSProperties = {
     backgroundColor: '#222',
     borderRadius: '10px',
     minHeight: '200px',
     maxHeight: '400px', // Ajusta según tus necesidades
     padding: '15px',
-    overflowY: 'auto',
+    overflowY: 'auto' as 'auto',
     WebkitOverflowScrolling: 'touch'
   };
 
-  const basketItemStyle = {
+  const basketItemStyle: CSSProperties = {
     display: 'flex',
     alignItems: 'center',
     gap: '10px',
@@ -117,21 +123,21 @@ const Search = () => {
     marginBottom: '10px'
   };
 
-  const imageStyle = {
+  const imageStyle: CSSProperties = {
     width: '50px',
     height: '50px',
     borderRadius: '5px'
   };
 
-  const placeholderImageStyle = {
+  const placeholderImageStyle: CSSProperties = {
     width: '50px',
     height: '50px',
     borderRadius: '5px',
     backgroundColor: '#555'
   };
 
-  const navBarStyle = {
-    position: 'fixed',
+  const navBarStyle: CSSProperties = {
+    position: 'fixed' as 'fixed',
     bottom: 0,
     left: 0,
     right: 0,
@@ -143,13 +149,13 @@ const Search = () => {
     alignItems: 'center'
   };
 
-  const linkStyle = {
+  const linkStyle: CSSProperties = {
     color: 'white',
     textDecoration: 'none',
     fontSize: '24px'
   };
 
-  const activeLinkStyle = {
+  const activeLinkStyle: CSSProperties = {
     color: '#4CAF50',
     textDecoration: 'none',
     fontSize: '24px'
