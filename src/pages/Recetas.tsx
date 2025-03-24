@@ -15,7 +15,7 @@ const recetasFit: Recipe[] = [
   {
     id: 1,
     title: "Panqueques de Avena y Plátano",
-    image: "https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    image: "/Pancakes.avif",
     emoji: "🍌🥞",
     ingredients: [
       "1 plátano maduro",
@@ -35,7 +35,7 @@ const recetasFit: Recipe[] = [
   {
     id: 2,
     title: "Ensalada de Pollo y Quinoa",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    image: "/Ensalada de pollo.avif",
     emoji: "🥗🍗",
     ingredients: [
       "1 taza de quinoa cocida",
@@ -54,7 +54,7 @@ const recetasFit: Recipe[] = [
   {
     id: 3,
     title: "Batido Proteico de Chocolate",
-    image: "https://images.unsplash.com/photo-1577805947697-89e18249d767?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    image: "/Batido de chocolate.avif",
     emoji: "🍫🥜",
     ingredients: [
       "1 taza de leche de almendras",
@@ -66,6 +66,33 @@ const recetasFit: Recipe[] = [
     preparation: [
       "Licúa todos los ingredientes hasta obtener una textura cremosa.",
       "Sirve frío y disfruta."
+    ]
+  },
+  {
+    id: 4,
+    title: "Pasta Integral con Vegetales",
+    image: "/Pastas con vegetales.avif", // Asegúrate de guardar la imagen descargada con este nombre
+    emoji: "🍝🥦",
+    ingredients: [
+      "200g de pasta integral",
+      "1 calabacín mediano",
+      "1 pimiento rojo",
+      "10 tomates cherry",
+      "2 dientes de ajo",
+      "2 cdas de aceite de oliva",
+      "Albahaca fresca",
+      "Queso parmesano rallado (opcional)",
+      "Sal y pimienta al gusto"
+    ],
+    preparation: [
+      "Cocina la pasta integral según las instrucciones del paquete. Reserva 1/2 taza del agua de cocción.",
+      "Corta el calabacín y el pimiento en trozos pequeños y parte los tomates cherry por la mitad.",
+      "En una sartén grande, sofríe los dientes de ajo picados con aceite de oliva a fuego medio.",
+      "Añade el calabacín y el pimiento, y cocina por unos 5 minutos hasta que estén tiernos.",
+      "Agrega los tomates cherry y cocina por 2 minutos más.",
+      "Incorpora la pasta cocida y un poco del agua reservada para crear una salsa ligera.",
+      "Sazona con sal, pimienta y hojas de albahaca fresca picadas.",
+      "Sirve inmediatamente y espolvorea con queso parmesano rallado si lo deseas."
     ]
   }
 ];
@@ -89,6 +116,10 @@ const Recetas = () => {
       <img 
         src={recipe.image} 
         alt={recipe.title}
+        onError={(e) => {
+          e.currentTarget.src = "/logo.png"; // Imagen de respaldo si hay error
+          e.currentTarget.onerror = null; // Prevenir bucles infinitos
+        }}
         style={{
           width: '100%',
           height: '150px',
@@ -120,6 +151,10 @@ const Recetas = () => {
       <img 
         src={recipe.image} 
         alt={recipe.title}
+        onError={(e) => {
+          e.currentTarget.src = "/logo.png"; // Imagen de respaldo si hay error
+          e.currentTarget.onerror = null; // Prevenir bucles infinitos
+        }}
         style={{
           width: '100%',
           height: '200px',
